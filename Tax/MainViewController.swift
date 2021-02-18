@@ -40,10 +40,11 @@ class MainViewController: UIViewController,UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         let a:Double = Double(txtAmount.text ?? "0") ?? 0
         if a != 0{
-            let tmpG = a > 21400 ? 21400 : a
-            let tmpQ = a > 21396 ? 21396 : a
+            let tmpG = a > 28014 ? 28014 : a
+            let tmpQ = a > 28018 ? 28018 : a
             let rat = tmpG * 0.07 + tmpQ * 0.105
-            txtInsurance.text = "\(Int(rat))"
+//            txtInsurance.text = "\(Int(rat))"
+            txtInsurance.text = String(format: "%.2f", rat);
         }
     }
     

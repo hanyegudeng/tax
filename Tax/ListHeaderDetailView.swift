@@ -58,15 +58,15 @@ class ListHeaderDetailView: UIView {
             oldAllAmount += item.oldAmount
             oldAllTax += item.oldTax
         }
-        labNewAllAmount.text = "新收入：\(Int(newAllAmount))"
-        labNewTax.text = "新税：\(Int(newAllTax))"
-        labOldAllAmount.text = "旧收入：\(Int(oldAllAmount))"
-        labOldTax.text = "旧税：\(Int(oldAllTax))"
+        labNewAllAmount.text = "新收入：\(Int(newAllAmount + 0.5))"
+        labNewTax.text = "新税：\(Int(newAllTax + 0.5))"
+        labOldAllAmount.text = "旧收入：\(Int(oldAllAmount + 0.5))"
+        labOldTax.text = "旧税：\(Int(oldAllTax + 0.5))"
         if newAllAmount >= oldAllAmount{
-            labMessage.text = "恭喜你，赚了\(Int(newAllAmount - oldAllAmount))"
+            labMessage.text = "恭喜你，赚了\(Int(newAllAmount - oldAllAmount  + 0.5))"
             labMessage.textColor = #colorLiteral(red: 0.8688190579, green: 0.3278953433, blue: 0.2576764524, alpha: 1)
         }else{
-            labMessage.text = "不好意思，亏了\(Int(oldAllAmount - newAllAmount))"
+            labMessage.text = "不好意思，亏了\(Int(oldAllAmount - newAllAmount  + 0.5))"
             labMessage.textColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         }
     }

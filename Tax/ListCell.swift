@@ -28,11 +28,11 @@ class ListCell: UITableViewCell {
     }
     
     func setCellDataSource(amount:TaxResult,index:Int) {
-        labLeft.text = "\(Int(amount.amount))"
-        labRight.text = "\(Int(amount.tax))"
+        labLeft.text = "\(Int(amount.amount + 0.5))"
+        labRight.text = "\(Int(amount.tax + 0.5))"
         labMonth.text = "\(index)月"
-        labOldTax.text = "\(Int(amount.oldTax))"
-        labOldAmount.text = "\(Int(amount.oldAmount))"
+        labOldTax.text = "\(Int(amount.oldTax + 0.5))"
+        labOldAmount.text = "\(Int(amount.oldAmount + 0.5))"
     }
     
 }
